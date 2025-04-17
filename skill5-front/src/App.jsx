@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import PostDetailPage from './pages/PostDetailPage'
-// import RegisterPage from './pages/RegisterPage'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/posts/:id" element={<PostDetailPage />} />
             {/* <Route path="/login" element={<login />} /> */}
-            {/* <Route path="/register" element={<RegisterPage />} /> */}
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
           {/* <HomePage /> */}
 
