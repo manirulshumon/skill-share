@@ -3,8 +3,9 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import PostDetailPage from './pages/PostDetailPage'
-import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import LoginPage from './pages/LoginPage'
+import RequireAuth from './components/RequireAuth'
 import CreatePost from './pages/CreatePost'
 
 function App() {
@@ -18,12 +19,19 @@ function App() {
             <Route path="/posts/:id" element={<PostDetailPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/create" element={<CreatePost />} />
+            <Route
+              path="/create"
+              element={
+                <RequireAuth>
+                  <CreatePost />
+                </RequireAuth>
+              }
+            />
           </Routes>
-        </div>
-        <Footer />
       </div>
-    </Router>
+      <Footer />
+    </div>
+    </Router >
   )
 }
 
