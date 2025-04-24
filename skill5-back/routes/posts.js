@@ -1,12 +1,32 @@
 import express from 'express'
 const router = express.Router();
+import jwt from 'jsonwebtoken'
 import Post from '../models/Post.js'
 
+const authenticate = (req, res, next) => {
+    const token = req.headers.authorization?.split(' ')[1];
+    
+    if (!token) {
+      return res.status(401).json({ message: 'Authentication required' });
+    }
+  
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      req.user = decoded;
+      next();
+    } catch (err) {
+      res.status(401).json({ message: 'Invalid token' });
+    }
+  };
 
 // Create Post
-router.post('/', async (req, res) => {
+router.post('/', authenticate, async (req, res) => {
     try {
-        const newPost = new Post(req.body);
+        const newPost = new Post({
+            ...req.body,
+            author: req.user.id // Store user ID with post
+          });
+          
         const savedPost = await newPost.save(); //saving the post to mdb with save method
         res.status(201).json(savedPost);
     } catch (err) {
