@@ -21,17 +21,19 @@ SkillShare is a friendly platform where neighbors can:
 ---
 
 ## ✨ Key Features  
-- **signup/login** with email.  
-- **Post skills or requests** with titles and descriptions.  
-- **Search posts** by category (tech, art, home) and location.  
-- **Chat instantly** with other users.  
-- **Rate users** after completing tasks.  
+- **register/login** with email.  
+- **Create Post skills or requests** with titles, descriptions, Location date and time.  
+
+  
 
 ## Key Features Updated with details
 # User Authentication
 
 - Signup/login with email/password (JWT for tokens).
-- Simple profile page (name, bio, skills, location).
+- Logout (JWT for tokens).
+- Create Post.
+- Dispay all Post.
+- Dispay single Post.
 
 # Skill/Request Posts
 
@@ -40,16 +42,36 @@ SkillShare is a friendly platform where neighbors can:
 
 # Browse Listings
 
-- Filter posts by category (e.g., tech, art, home repair) and location (city/zip code).
 - Display posts in a clean grid/list view.
 
 
 ---
 
-## 🚀 Future Plans  
-- 📍 Show posts on a map.  
-- 🔔 Notify users about new messages.  
-- 📱 Android and IOS app version.  
+##  Future Plans  
+- Show posts on a map.  
+- Notify users about new messages.  
+- Android and IOS app version.  
+- **Chat instantly** with other users.  
+- **Rate users** after completing tasks.
+- **Search posts** by category (tech, art, home) and location.  
+- Filter posts by category (e.g., tech, art, home repair) and location (city/zip code).
+
+---
+
+##  Installation instruction  
+- Clone repo
+- cd skill5-back
+- npm install
+- create .env and set below variables
+  - PORT=5000
+  - MONGODB_URI
+  - JWT_SECRET
+- run "node server"
+
+- cd skill5-back
+- npm install
+- create .env and add "VITE_BACKEND_URL=http://localhost:5000"
+- run "npm run dev"
 
 ---
 

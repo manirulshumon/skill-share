@@ -25,13 +25,13 @@ const Navbar = () => {
                         <>
                             <Link
                                 to="/create"
-                                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+                                className="px-3 py-2 rounded-md text-lg font-medium text-gray-100 hover:bg-teal-600"
                             >
                                 Create Post
                             </Link>
                             <button
                                 onClick={handleLogout}
-                                className="px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50"
+                                className="px-3 py-2 rounded-md text-lg font-medium text-red-600 hover:bg-teal-600"
                             >
                                 Logout
                             </button>
@@ -40,13 +40,13 @@ const Navbar = () => {
                         <>
                             <Link
                                 to="/login"
-                                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+                                className="px-3 py-2 rounded-md text-lg font-medium text-gray-100 hover:bg-teal-600"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/register"
-                                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+                                className="px-3 py-2 rounded-md text-lg font-medium text-gray-100 hover:bg-teal-600"
                             >
                                 Register
                             </Link>
